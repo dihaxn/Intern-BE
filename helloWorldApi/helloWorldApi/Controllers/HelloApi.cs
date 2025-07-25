@@ -9,6 +9,9 @@ namespace helloWorldApi.Controllers
     public class HelloApi: ControllerBase
     {
         [HttpGet]
-        public IActionResult Get() => Ok("Sunny");
+        public string Get()
+        {
+            return "Hello, World!";
+        }
     }
 }
