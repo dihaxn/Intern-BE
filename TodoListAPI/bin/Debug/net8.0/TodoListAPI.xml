@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoListAPI</name>
+    </assembly>
+    <members>
+        <member name="T:TodoListAPI.Controllers.V1.TodosController">
+            <summary>
+            Controller for managing V1 todo endpoints.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.#ctor(TodoListAPI.Services.ITodoService,TodoListAPI.Services.ILoggingService)">
+            <summary>
+            Initializes a new instance of the TodosController class.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.GetTodos">
+            <summary>
+            Get all todo items
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.GetTodo(System.Int32)">
+            <summary>
+            Get a specific todo item by ID
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.CreateTodo(TodoListAPI.Models.CreateTodoRequest)">
+            <summary>
+            Create a new todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.UpdateTodo(System.Int32,TodoListAPI.Models.UpdateTodoRequest)">
+            <summary>
+            Update an existing todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.DeleteTodo(System.Int32)">
+            <summary>
+            Delete a todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V1.TodosController.ToggleTodoCompletion(System.Int32)">
+            <summary>
+            Toggle completion status of a todo item
+            </summary>
+        </member>
+        <member name="T:TodoListAPI.Controllers.V2.TodosController">
+            <summary>
+            Controller for managing V2 todo endpoints.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.#ctor(TodoListAPI.Services.ITodoService,TodoListAPI.Services.ILoggingService)">
+            <summary>
+            Initializes a new instance of the TodosController class.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.GetTodos">
+            <summary>
+            Get all todo items
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.GetTodo(System.Int32)">
+            <summary>
+            Get a specific todo item by ID
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.CreateTodo(TodoListAPI.Models.CreateTodoRequest)">
+            <summary>
+            Create a new todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.UpdateTodo(System.Int32,TodoListAPI.Models.UpdateTodoRequest)">
+            <summary>
+            Update an existing todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.DeleteTodo(System.Int32)">
+            <summary>
+            Delete a todo item
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Controllers.V2.TodosController.ToggleTodoCompletion(System.Int32)">
+            <summary>
+            Toggle completion status of a todo item
+            </summary>
+        </member>
+        <member name="T:TodoListAPI.Middleware.GlobalExceptionMiddleware">
+            <summary>
+            Middleware for handling global exceptions and returning standardized error responses.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Middleware.GlobalExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)">
+            <summary>
+            Initializes a new instance of the GlobalExceptionMiddleware class.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Middleware.GlobalExceptionMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Handles the HTTP request and catches any unhandled exceptions.
+            </summary>
+        </member>
+        <member name="T:TodoListAPI.Middleware.RequestLoggingMiddleware">
+            <summary>
+            Middleware for logging HTTP requests and responses.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Middleware.RequestLoggingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)">
+            <summary>
+            Initializes a new instance of the RequestLoggingMiddleware class.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Middleware.RequestLoggingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Handles the HTTP request and logs request and response details.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Middleware.RequestLoggingMiddleware.ReadRequestBodyAsync(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Reads the request body as a string.
+            </summary>
+        </member>
+        <member name="T:TodoListAPI.Models.ApiResponse`1">
+            <summary>
+            Standard API response wrapper.
+            </summary>
+        </member>
+        <member name="P:TodoListAPI.Models.ApiResponse`1.Success">
+            <summary>Indicates if the request was successful</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.ApiResponse`1.Message">
+            <summary>Response message</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.ApiResponse`1.Data">
+            <summary>Response data</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.ApiResponse`1.Errors">
+            <summary>List of error messages</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.ApiResponse`1.TotalCount">
+            <summary>Total count of items (for list responses)</summary>
+        </member>
+        <member name="T:TodoListAPI.Models.CreateTodoRequest">
+            <summary>
+            Request model for creating a todo item.
+            </summary>
+        </member>
+        <member name="P:TodoListAPI.Models.CreateTodoRequest.Title">
+            <summary>Title of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.CreateTodoRequest.Description">
+            <summary>Description of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.CreateTodoRequest.Priority">
+            <summary>Priority of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.CreateTodoRequest.DueDate">
+            <summary>Due date of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.CreateTodoRequest.Category">
+            <summary>Category of the todo item</summary>
+        </member>
+        <member name="T:TodoListAPI.Models.Product">
+            <summary>
+            Represents a product.
+            </summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.Id">
+            <summary>Unique identifier</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.Title">
+            <summary>Title of the product</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.Description">
+            <summary>Description of the product</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.IsCompleted">
+            <summary>Completion status</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.Priority">
+            <summary>Priority of the product</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.DueDate">
+            <summary>Due date of the product</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.CreatedAt">
+            <summary>Creation date</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.UpdatedAt">
+            <summary>Last updated date</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.Product.Category">
+            <summary>Category of the product</summary>
+        </member>
+        <member name="T:TodoListAPI.Models.TodoItem">
+            <summary>
+            Represents a todo item.
+            </summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.Id">
+            <summary>Unique identifier</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.Title">
+            <summary>Title of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.Description">
+            <summary>Description of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.IsCompleted">
+            <summary>Completion status</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.CreatedAt">
+            <summary>Creation date</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.CompletedAt">
+            <summary>Date completed</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.Priority">
+            <summary>Priority level</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.Category">
+            <summary>Category of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.DueDate">
+            <summary>Due date</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.TodoItem.UpdatedAt">
+            <summary>Last updated date</summary>
+        </member>
+        <member name="T:TodoListAPI.Models.Priority">
+            <summary>
+            Priority levels for a todo item.
+            </summary>
+        </member>
+        <member name="F:TodoListAPI.Models.Priority.Low">
+            <summary>Low priority</summary>
+        </member>
+        <member name="F:TodoListAPI.Models.Priority.Medium">
+            <summary>Medium priority</summary>
+        </member>
+        <member name="F:TodoListAPI.Models.Priority.High">
+            <summary>High priority</summary>
+        </member>
+        <member name="T:TodoListAPI.Models.UpdateTodoRequest">
+            <summary>
+            Request model for updating a todo item.
+            </summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.Title">
+            <summary>Title of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.Description">
+            <summary>Description of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.IsCompleted">
+            <summary>Completion status</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.Priority">
+            <summary>Priority of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.DueDate">
+            <summary>Due date of the todo item</summary>
+        </member>
+        <member name="P:TodoListAPI.Models.UpdateTodoRequest.Category">
+            <summary>Category of the todo item</summary>
+        </member>
+        <member name="T:TodoListAPI.Services.ILoggingService">
+            <summary>
+            Service interface for logging requests, responses, and errors.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ILoggingService.LogRequest(System.String,System.String,System.String)">
+            <summary>Log an incoming request.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ILoggingService.LogResponse(System.Int32,System.String)">
+            <summary>Log an outgoing response.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ILoggingService.LogError(System.String,System.Exception)">
+            <summary>Log an error.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ILoggingService.LogInfo(System.String)">
+            <summary>Log an informational message.</summary>
+        </member>
+        <member name="T:TodoListAPI.Services.ITodoService">
+            <summary>
+            Service interface for managing todo items.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetAllTodosAsync">
+            <summary>Get all todo items.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetTodoByIdAsync(System.Int32)">
+            <summary>Get a todo item by its ID.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.CreateTodoAsync(TodoListAPI.Models.CreateTodoRequest)">
+            <summary>Create a new todo item.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.UpdateTodoAsync(System.Int32,TodoListAPI.Models.UpdateTodoRequest)">
+            <summary>Update an existing todo item.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.DeleteTodoAsync(System.Int32)">
+            <summary>Delete a todo item by its ID.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.ToggleCompletionAsync(System.Int32)">
+            <summary>Toggle the completion status of a todo item.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetTodosByCategoryAsync(System.String)">
+            <summary>Get todo items by category.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetOverdueTodosAsync">
+            <summary>Get overdue todo items.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetTodosByPriorityAsync(TodoListAPI.Models.Priority)">
+            <summary>Get todo items by priority.</summary>
+        </member>
+        <member name="M:TodoListAPI.Services.ITodoService.GetTodoStatisticsAsync">
+            <summary>Get statistics about todo items.</summary>
+        </member>
+        <member name="T:TodoListAPI.Services.LoggingService">
+            <summary>
+            Implementation of ILoggingService for logging requests, responses, and errors.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.LoggingService.#ctor(Microsoft.Extensions.Logging.ILogger{TodoListAPI.Services.LoggingService})">
+            <summary>
+            Initializes a new instance of the LoggingService class.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.LoggingService.LogRequest(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.LoggingService.LogResponse(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.LoggingService.LogError(System.String,System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.LoggingService.LogInfo(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:TodoListAPI.Services.TodoService">
+            <summary>
+            In-memory implementation of ITodoService for managing todo items.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.#ctor">
+            <summary>
+            Initializes a new instance of the TodoService class with sample data.
+            </summary>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetAllTodosAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetTodoByIdAsync(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.CreateTodoAsync(TodoListAPI.Models.CreateTodoRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.UpdateTodoAsync(System.Int32,TodoListAPI.Models.UpdateTodoRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.DeleteTodoAsync(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.ToggleCompletionAsync(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetTodosByCategoryAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetOverdueTodosAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetTodosByPriorityAsync(TodoListAPI.Models.Priority)">
+            <inheritdoc/>
+        </member>
+        <member name="M:TodoListAPI.Services.TodoService.GetTodoStatisticsAsync">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
