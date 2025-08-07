@@ -1,0 +1,9 @@
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.csproj.AssemblyReference.cache
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.AssemblyInfoInputs.cache
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.AssemblyInfo.cs
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.csproj.CoreCompileInputs.cache
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ihanl\OneDrive\Desktop\Intern - BE\JWT-Test\JWT-Test\obj\Debug\net8.0\JWT-Test.sourcelink.json

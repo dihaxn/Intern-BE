@@ -1,0 +1,6 @@
+@Log4net_HostAddress = http://localhost:5268
+
+GET {{Log4net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
